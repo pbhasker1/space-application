@@ -1,0 +1,15 @@
+<div class="col card" *ngFor="let item of flights">
+    <div>
+        <img src={{item?.icon_url}}/>
+    </div>
+    <div class="mission-details">
+        <span>{{item?.name}}#{{item?.flightNumber}}</span>
+    </div> 
+    <div class="categories">Mission Ids:</div>
+    <ul>
+        <li *ngFor="let id of item.missionId">{{ id }}</li>
+    </ul>
+    <div class="categories">Launch Year: <span>{{item?.year}}</span></div>
+    <div class="categories">Successful Launch: <span>{{ item?.launchSuccess }}</span></div>
+    <div class="categories">Successful Landing: <span>{{ item?.landSuccess }}</span></div>
+</div>

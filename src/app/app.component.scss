@@ -1,0 +1,39 @@
+.container {
+    background-color: #b2b2b2;
+}
+
+header {
+    padding: 10px 10px 0px 10px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #b2b2b2;
+}
+
+footer {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-wrap: wrap;
+
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin-top: 10px;
+}
