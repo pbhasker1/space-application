@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContentsectionComponent } from './contentsection.component';
+import { ContentsectionComponent } from './contentSection.component';
 
 describe('ContentsectionComponent', () => {
   let component: ContentsectionComponent;
@@ -13,13 +13,10 @@ describe('ContentsectionComponent', () => {
     .compileComponents();
   });
 
-  beforeEach(() => {
+  it('should create', () => {
     fixture = TestBed.createComponent(ContentsectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
-
-  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

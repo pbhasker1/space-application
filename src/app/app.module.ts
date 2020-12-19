@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { ContentsectionComponent } from './contentsection/contentsection.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { ContentsectionComponent } from './contentSection/contentSection.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({

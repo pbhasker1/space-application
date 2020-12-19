@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { logWarnings } from 'protractor/built/driverProviders';
-import { QueryparamsService } from '../services/queryparams.service';
+import { DataFilterService } from '../services/DataFilter.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,12 +13,14 @@ export class SidebarComponent implements OnInit {
   launchSuccessful= "";
   landingSuccessful= "";
 
-  constructor(private dataService: QueryparamsService) { }
+  constructor(private dataFilterService: DataFilterService) { }
 
   ngOnInit(): void {
   }
 
-  getYearFilteredData(event) {
+  //This component helps in setting the filetr data to the observable in DataFilterService.
+  //helps in filtering the data on the basis of launch year.
+  getYearFilteredData(event): void {
     let list = event.target.parentElement.getElementsByClassName("active-button");
     for(let item of list){
       item.classList.remove("active-button");
@@ -30,10 +31,11 @@ export class SidebarComponent implements OnInit {
       this.selectedYear = event.target?.innerHTML;
       event.target?.classList.add("active-button");
     }
-    this.dataService.updateLaunchYear(this.selectedYear);
+    this.dataFilterService.updateLaunchYear(this.selectedYear);
   }
 
-  getLaunchFilteredData(event) {
+  //helps in filtering the data on the basis of launch status.  
+  getLaunchFilteredData(event) :void{
     let list = event.target.parentElement.getElementsByClassName("active-button");
     for(let item of list){
       item.classList.remove("active-button");
@@ -44,10 +46,11 @@ export class SidebarComponent implements OnInit {
       this.launchSuccessful = event.target?.innerHTML;
       event.target?.classList.add("active-button");
     }   
-    this.dataService.updateLaunchSuccessful(this.launchSuccessful);
+    this.dataFilterService.updateLaunchSuccessful(this.launchSuccessful);
   } 
   
-  getLandingFilteredData(event) {
+  //helps in filtering the data on the basis of landing status. 
+  getLandingFilteredData(event) :void{
     let list = event.target.parentElement.getElementsByClassName("active-button");
     for(let item of list){
       item.classList.remove("active-button");
@@ -58,7 +61,7 @@ export class SidebarComponent implements OnInit {
       this.landingSuccessful = event.target?.innerHTML;
       event.target?.classList.add("active-button");
     }   
-    this.dataService.updateLandSuccessful(this.landingSuccessful);
+    this.dataFilterService.updateLandSuccessful(this.landingSuccessful);
   }
 
 }

@@ -4,7 +4,9 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class QueryparamsService {
+
+//Observables for different filter parameters.
+export class DataFilterService {
 
   private launchYear = new BehaviorSubject('');
   selectedLaunchYear = this.launchYear.asObservable();
@@ -17,15 +19,15 @@ export class QueryparamsService {
 
   constructor() { }
 
-  updateLaunchYear(message: string) {
-  this.launchYear.next(message);
+  updateLaunchYear(message: string) :void {
+    this.launchYear.next(message);
   }
 
-  updateLaunchSuccessful(message: string) {
-  this.launchSuccessful.next(message);
+  updateLaunchSuccessful(message: string) :void{
+    this.launchSuccessful.next(message);
   }
 
-  updateLandSuccessful(message: string) {
+  updateLandSuccessful(message: string) :void{
     this.landSuccessful.next(message);
   }
 

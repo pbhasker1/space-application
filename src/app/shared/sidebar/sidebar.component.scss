@@ -1,26 +1,26 @@
 .content {
-    background-color: white;
-    margin: 10px;
-    margin-right: 10px;
-    border-radius: 5px;
+    background-color: #ffffff;
+    margin: 0.625rem;
+    margin-right: 0.625rem;
+    border-radius: 0.3125rem;
 }
 
 #filter {
-    margin: 20px;
+    margin: 1.25rem;
     font-weight: bold;
-    padding-top: 15px;
+    padding-top: 0.9375rem;
 }
 
 #headings {
-    border-bottom: 1px grey;
-    margin: 20px;
+    border-bottom: 1px #bebebe;
+    margin: 1.25rem;
     text-align: center;
 }
 
 #headings span{
     position:relative;
     display: inline-block;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #bebebe;
     padding-left: 10%;
     padding-right: 10%;
     white-space: nowrap;
@@ -33,16 +33,16 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
     justify-content: space-between;
   }
   
   .button {
     width: 40%;
-    background-color: lightgreen;
-    margin: 8px;
-    border-radius: 10px;
+    background-color: #90EE90;
+    margin: 0.5rem;
+    border-radius: 0.625rem;
   }
 
   .button:hover {

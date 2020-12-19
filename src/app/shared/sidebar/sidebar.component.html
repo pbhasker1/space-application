@@ -4,7 +4,7 @@
         <span>Launch Year</span>
     </div>
     <div class="categories">
-        <button class="button" (click)="getYearFilteredData($event)" *ngFor="let year of years" >{{ year }}</button>
+        <button class="button" id="button_{{year}}" (click)="getYearFilteredData($event)" *ngFor="let year of years" >{{ year }}</button>
     </div>
     <div id="headings">
         <span>Successful Launch</span>

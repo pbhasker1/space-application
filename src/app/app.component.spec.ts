@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
+
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -26,10 +27,18 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('space-application');
   });
 
-  it('should render title', () => {
+  it('should render header', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('space-application app is running!');
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('header').textContent).toContain('SpaceX Launch Programs');
   });
+
+  it('should render footer', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('footer').textContent).toContain('Developed By: Prabhash Bhasker');
+  });
+
 });
