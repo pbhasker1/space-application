@@ -3,11 +3,11 @@ This application helps in bringing information about the space flights that happ
 
 ## Project structure
 
-1.The src/app folder contains the content section component and the shared folder. The contentsection is responsible for displaying the data of various flights.
+1. The files related to application are present in the master branch of the repository. The src/app folder contains the content section component and the shared folder. The contentsection is responsible for displaying the data of various flights.
 
 2. The shared folder contains services folder and sidebar component. The sidebar components contains the logic for displaying various filers and applying them to the dat displayed in content section component.
 
-3. THe services folder contain two services files -: data.service.ts and DataFilter.service.ts. data.service.ts contains the hhtp call for fetching the data from the api and DataFilter.service.ts contains the mechanism to update the filter parameters by means of observables imported from rxjs library. This helps in reflecting the changes in the filter criteria in side bar component to content Section component.
+3. THe services folder contain two services files -: data.service.ts and DataFilter.service.ts. data.service.ts contains the hhtp call for fetching the data from the api and DataFilter.service.ts contains the mechanism to update the filter parameters by means of observables imported from rxjs library. This helps in reflecting the changes in the filter criteria in side bar component to contentSection component.
 
 # SpaceApplication
 
